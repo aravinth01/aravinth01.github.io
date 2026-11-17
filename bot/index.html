@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShortlistedBot</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+    code, pre { background: #f4f4f4; border-radius: 4px; }
+    code { padding: 1px 4px; }
+    pre { padding: 12px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>ShortlistedBot</h1>
+
+  <h2>Who we are</h2>
+  <p>ShortlistedBot belongs to Shortlisted, a research service for B2B software companies. When AI assistants
+  (ChatGPT, Gemini, Google AI Mode, Claude and others) cite a public web page as a source, ShortlistedBot may
+  visit that page once to read its text and record which software products it mentions.</p>
+
+  <h2>How it behaves</h2>
+  <ul>
+    <li>User-Agent: <code>ShortlistedBot/1.0 (+https://aravinth01.github.io/bot)</code></li>
+    <li>Reads and obeys <code>robots.txt</code> before every visit, including <code>Crawl-delay</code>.</li>
+    <li>Plain page requests only: one request at a time per site, at least 5 seconds apart. No logins, no forms,
+    no proxies, and no attempts to get around blocks.</li>
+    <li>Pages that answer 401, 403 or 429 are never retried automatically.</li>
+    <li>Raw HTML is not stored; only the readable text needed to check product mentions.</li>
+  </ul>
+
+  <h2>How to opt out</h2>
+  <p>Add this to your site's <code>robots.txt</code> and ShortlistedBot will stop visiting:</p>
+  <pre>User-agent: ShortlistedBot
+Disallow: /</pre>
+  <p>Or email us and we will exclude your domain.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:sreearavinth10@gmail.com">sreearavinth10@gmail.com</a></p>
+</body>
+</html>
